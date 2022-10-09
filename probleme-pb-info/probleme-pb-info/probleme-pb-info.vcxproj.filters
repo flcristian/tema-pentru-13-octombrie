@@ -37,5 +37,14 @@
     <Text Include="elevi.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="bilete.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="elevi2.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="uniforme.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

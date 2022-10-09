@@ -1,2 +1,3 @@
 ﻿  probleme-pb-info.cpp
+D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\functii.h(270,18): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
   probleme-pb-info.vcxproj -> D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\x64\Debug\probleme-pb-info.exe

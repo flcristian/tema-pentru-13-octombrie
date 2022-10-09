@@ -135,8 +135,11 @@
     <ClInclude Include="structuri.h" />
   </ItemGroup>
   <ItemGroup>
+    <Text Include="bilete.txt" />
     <Text Include="elevi.txt" />
+    <Text Include="elevi2.txt" />
     <Text Include="intervale.txt" />
+    <Text Include="uniforme.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
