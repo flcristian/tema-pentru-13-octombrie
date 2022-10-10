@@ -52,5 +52,8 @@
     <Text Include="out.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="baza-de-date.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

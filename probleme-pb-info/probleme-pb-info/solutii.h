@@ -155,3 +155,76 @@ void solutiepb6() {
 }
 
 // Problema 7
+// Se citește numărul n și apoi n articole 
+// cu structura : prenume nume salariu 
+// vârstă funcție număr_de_telefon email.
+// Fiecare articol este plasat pe câte o 
+// linie, câmpurile sale fiind separate prin 
+// câte un spațiu. Câmpurile salariu și vârstă 
+// conțin numere naturale, celelalte conțin 
+// șiruri de caractere.
+//
+// Se citește apoi un număr natural p cuprins 
+// între 1 și 7 și un caracter c care poate 
+// fi + sau - .
+//
+// Se cere ordonarea celor n articole în 
+// funcție de p și c, astfel :
+//
+// dacă p = 1, ordonarea se face după 
+// prenume; dacă p = 2, ordonarea se face 
+// după nume; dacă p = 3, ordonarea se face 
+// după salariu; dacă p = 4, ordonarea se 
+// face după vârstă; dacă p = 5, ordonarea se 
+// face după funcție; dacă p = 6, ordonarea 
+// se face după număr_de_telefon; dacă p = 7, 
+// ordonarea se face după email;
+// dacă c are valoarea + , ordonarea va fi 
+// crescătoare, iar dacă c are valoarea - , 
+// ordonarea va fi descrescătoare;
+// dacă două articole au aceeași valoare a 
+// câmpului în raport cu care se face 
+// sortarea, ordinea lor nu se va modifica.
+
+void solutiepb7() {
+	int n;
+	Date x[100];
+	citirePb7(x, n);
+
+	int p;
+	char c;
+	cout << "Introduceti p (1-7) : ";
+	cin >> p;
+	cout << "Introduceti c (+ / -) : ";
+	cin >> c;
+
+	switch (p)
+	{
+	case 1:
+		sortarePrenume(x, n);
+	case 2:
+		sortareNume(x, n);
+	case 3:
+		sortareSalariu(x, n);
+	case 4:
+		sortareVarsta(x, n);
+	case 5:
+		sortareNumarTelefon(x, n);
+	case 6:
+		sortareEmail(x, n);
+	case 7:
+		sortareFunctie(x, n);
+	default:
+		break;
+	}
+
+	switch (c)
+	{
+	case '+':
+		afisarePb7Cresc(x, n);
+	case '-':
+		afisarePb7Descresc(x, n);
+	default:
+		break;
+	}
+}

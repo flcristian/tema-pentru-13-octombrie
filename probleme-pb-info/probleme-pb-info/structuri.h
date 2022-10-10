@@ -85,3 +85,13 @@ struct Eveniment {
 		return ore * 60 * 60 + minute * 60 + secunde;
 	}
 };
+
+struct Date {
+	string prenume;
+	string nume;
+	int salariu;
+	int varsta;
+	string functie;
+	string numartelefon;
+	string email;
+};

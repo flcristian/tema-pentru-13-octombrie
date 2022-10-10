@@ -403,3 +403,140 @@ void afisarePb6(Eveniment x[], int n, Eveniment raspuns) {
 
 // Problema 7
 
+void citirePb7(Date x[], int& n) {
+	ifstream f("baza-de-date.txt");
+	f >> n;
+
+	for (int i = 0; i < n; i++) {
+		Date date;
+
+		f >> date.prenume;
+		f >> date.nume;
+		f >> date.salariu;
+		f >> date.varsta;
+		f >> date.numartelefon;
+		f >> date.email;
+		f >> date.functie;
+
+		x[i] = date;
+	}
+}
+
+void sortarePrenume(Date x[], int n) {
+	bool flag = true;
+	do {
+		flag = true;
+		for (int i = 0; i < n - 1; i++) {
+			if (sortareString(x[i].prenume, x[i + 1].prenume) == 1) {
+				Date r = x[i];
+				x[i] = x[i + 1];
+				x[i + 1] = r;
+				flag = false;
+			}
+		}
+	} while (flag == false);
+}
+
+void sortareNume(Date x[], int n) {
+	bool flag = true;
+	do {
+		flag = true;
+		for (int i = 0; i < n - 1; i++) {
+			if (sortareString(x[i].nume, x[i + 1].nume) == 1) {
+				Date r = x[i];
+				x[i] = x[i + 1];
+				x[i + 1] = r;
+				flag = false;
+			}
+		}
+	} while (flag == false);
+}
+
+void sortareSalariu(Date x[], int n) {
+	bool flag = true;
+	do {
+		flag = true;
+		for (int i = 0; i < n - 1; i++) {
+			if (x[i].varsta > x[i + 1].varsta) {
+				Date r = x[i];
+				x[i] = x[i + 1];
+				x[i + 1] = r;
+				flag = false;
+			}
+		}
+	} while (flag == false);
+}
+
+void sortareVarsta(Date x[], int n) {
+	bool flag = true;
+	do {
+		flag = true;
+		for (int i = 0; i < n - 1; i++) {
+			if (x[i].salariu > x[i + 1].salariu) {
+				Date r = x[i];
+				x[i] = x[i + 1];
+				x[i + 1] = r;
+				flag = false;
+			}
+		}
+	} while (flag == false);
+}
+
+void sortareNumarTelefon(Date x[], int n) {
+	bool flag = true;
+	do {
+		flag = true;
+		for (int i = 0; i < n - 1; i++) {
+			if (sortareString(x[i].numartelefon, x[i + 1].numartelefon) == 1) {
+				Date r = x[i];
+				x[i] = x[i + 1];
+				x[i + 1] = r;
+				flag = false;
+			}
+		}
+	} while (flag == false);
+}
+
+void sortareEmail(Date x[], int n) {
+	bool flag = true;
+	do {
+		flag = true;
+		for (int i = 0; i < n - 1; i++) {
+			if (sortareString(x[i].email, x[i + 1].email) == 1) {
+				Date r = x[i];
+				x[i] = x[i + 1];
+				x[i + 1] = r;
+				flag = false;
+			}
+		}
+	} while (flag == false);
+}
+
+void sortareFunctie(Date x[], int n) {
+	bool flag = true;
+	do {
+		flag = true;
+		for (int i = 0; i < n - 1; i++) {
+			if (sortareString(x[i].functie, x[i + 1].functie) == 1) {
+				Date r = x[i];
+				x[i] = x[i + 1];
+				x[i + 1] = r;
+				flag = false;
+			}
+		}
+	} while (flag == false);
+}
+
+void afisarePb7Cresc(Date x[], int n) {
+	for (int i = 0; i < n; i++) {
+		Date d = x[i];
+		cout << d.prenume << " " << d.nume << " " << d.salariu << " " << d.varsta << " " << d.functie << " " << d.numartelefon << " " << d.email << " " << endl;
+	}
+}
+
+void afisarePb7Descresc(Date x[], int n) {
+	for (int i = n - 1; i > -1; i--) {
+		Date d = x[i];
+		cout << d.prenume << " " << d.nume << " " << d.salariu << " " << d.varsta << " " << d.functie << " " << d.numartelefon << " " << d.email << " " << endl;
+	}
+}
