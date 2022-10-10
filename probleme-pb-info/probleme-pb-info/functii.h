@@ -348,7 +348,58 @@ void afisarePb5(int indice[], int p) {
 	}
 }
 
+// Problema 6
 
+void citirePb6(Eveniment x[], int& n) {
+	ifstream f("in.txt");
+	n = 0;
 
+	while (!f.eof()) {
+		f >> x[n].ore;
+		f >> x[n].minute;
+		f >> x[n].secunde;
+		n++;
+	}
+}
 
+Eveniment durataAdunata(Eveniment x[], int n) {
+	Eveniment z;
+	int ore = 0, minute = 0, secunde = 0;
+	for (int i = 0; i < n; i++) {
+		ore += x[i].ore;
+		minute += x[i].minute;
+		secunde += x[i].secunde;
+	}
+
+	minute += secunde / 60;
+	secunde %= 60;
+	ore += minute / 60;
+	minute %= 60;
+
+	z.ore = ore;
+	z.minute = minute;
+	z.secunde = secunde;
+
+	return z;
+}
+
+void afisarePb6(Eveniment x[], int n, Eveniment raspuns) {
+	ofstream f("out.txt");
+
+	for (int i = 0; i < n; i++) {
+		f << x[i].ore << ":";
+		f << x[i].minute << ":";
+		f << x[i].secunde << endl;
+	}
+
+	for (int i = 0; i < n; i++) {
+		f << x[i].durataInSecunde() << endl;
+	}
+
+	f << raspuns.ore << ":";
+	f << raspuns.minute << ":";
+	f << raspuns.secunde << endl;
+}
+
+// Problema 7
 

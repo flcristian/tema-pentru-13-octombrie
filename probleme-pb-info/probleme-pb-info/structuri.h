@@ -75,3 +75,13 @@ struct Uniforma {
 	int nr;
 	int tip;
 };
+
+struct Eveniment {
+	int ore;
+	int minute;
+	int secunde;
+
+	int durataInSecunde() {
+		return ore * 60 * 60 + minute * 60 + secunde;
+	}
+};

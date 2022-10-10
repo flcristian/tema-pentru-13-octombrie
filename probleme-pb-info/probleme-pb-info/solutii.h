@@ -129,4 +129,29 @@ void solutiepb5() {
 	afisarePb5(indice, p);
 }
 
+// Problema 6
+// Se consideră două evenimente a căror durată
+// este exprimată fiecare prin câte trei 
+// numere naturale: ore (h), minute (m) şi 
+// secunde (s).
+// 
+// Să se scrie în fișierul de ieșire :
+// a) pe primele două linii, duratele în '
+// formatul h : m: s
+// b) pe următoarele două linii, duratele 
+// exprimate în secunde, corespunzătoare 
+// fiecărui eveniment, pe rânduri separate;
+// c) pe următoarea linie suma obţinută din 
+// adunarea duratelor celor două evenimente, 
+// exprimată în ore, minute, secunde, în 
+// formatul h : m: s.
 
+void solutiepb6() {
+	int n;
+	Eveniment x[100];
+	citirePb6(x, n);
+	Eveniment raspuns = durataAdunata(x, n);
+	afisarePb6(x, n, raspuns);
+}
+
+// Problema 7

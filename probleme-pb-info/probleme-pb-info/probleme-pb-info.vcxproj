@@ -138,7 +138,9 @@
     <Text Include="bilete.txt" />
     <Text Include="elevi.txt" />
     <Text Include="elevi2.txt" />
+    <Text Include="in.txt" />
     <Text Include="intervale.txt" />
+    <Text Include="out.txt" />
     <Text Include="uniforme.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -46,5 +46,11 @@
     <Text Include="uniforme.txt">
       <Filter>Resource Files</Filter>
     </Text>
+    <Text Include="in.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+    <Text Include="out.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>
