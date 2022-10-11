@@ -1,12 +1,3 @@
 ﻿  probleme-pb-info.cpp
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\functii.h(270,18): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(201,15): error C2059: syntax error: ')'
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(203,2): error C2046: illegal case
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(205,2): error C2046: illegal case
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(207,2): error C2046: illegal case
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(209,2): error C2046: illegal case
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(211,2): error C2046: illegal case
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(213,2): error C2046: illegal case
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(215,2): error C2046: illegal case
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(217,2): error C2047: illegal default
-D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\solutii.h(218,3): error C2043: illegal break
+D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\probleme-pb-info\functii.h(282,18): warning C4244: '+=': conversion from 'double' to 'int', possible loss of data
+  probleme-pb-info.vcxproj -> D:\mycode\structuri\tema-13-octombrie\probleme-pb-info\x64\Debug\probleme-pb-info.exe

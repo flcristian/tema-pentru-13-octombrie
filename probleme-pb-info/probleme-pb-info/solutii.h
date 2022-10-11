@@ -202,18 +202,25 @@ void solutiepb7() {
 	{
 	case 1:
 		sortarePrenume(x, n);
+		break;
 	case 2:
 		sortareNume(x, n);
+		break;
 	case 3:
 		sortareSalariu(x, n);
+		break;
 	case 4:
 		sortareVarsta(x, n);
+		break;
 	case 5:
-		sortareNumarTelefon(x, n);
-	case 6:
-		sortareEmail(x, n);
-	case 7:
 		sortareFunctie(x, n);
+		break;
+	case 6:
+		sortareNumarTelefon(x, n);
+		break;
+	case 7:
+		sortareEmail(x, n);
+		break;
 	default:
 		break;
 	}
@@ -222,8 +229,10 @@ void solutiepb7() {
 	{
 	case '+':
 		afisarePb7Cresc(x, n);
+		break;
 	case '-':
 		afisarePb7Descresc(x, n);
+		break;
 	default:
 		break;
 	}

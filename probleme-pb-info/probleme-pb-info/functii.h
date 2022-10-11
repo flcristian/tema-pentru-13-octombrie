@@ -100,6 +100,18 @@ int sortareString(string x, string y) {
 	return -1;
 }
 
+int sortareStringToInt(string x, string y) {
+	for (int i = 0; x[i] > 47 && x[i] < 58; i++) {
+		if (x[i] > y[i]) {
+			return 1;
+		}
+		if (x[i] < y[i]) {
+			return 0;
+		}
+	}
+	return -1;
+}
+
 void sortareAlfabetica(string prenume[], string nume[], int n) {
 	bool flag = true;
 	do {
@@ -457,7 +469,7 @@ void sortareSalariu(Date x[], int n) {
 	do {
 		flag = true;
 		for (int i = 0; i < n - 1; i++) {
-			if (x[i].varsta > x[i + 1].varsta) {
+			if (x[i].salariu > x[i + 1].salariu) {
 				Date r = x[i];
 				x[i] = x[i + 1];
 				x[i + 1] = r;
@@ -472,7 +484,7 @@ void sortareVarsta(Date x[], int n) {
 	do {
 		flag = true;
 		for (int i = 0; i < n - 1; i++) {
-			if (x[i].salariu > x[i + 1].salariu) {
+			if (x[i].varsta > x[i + 1].varsta) {
 				Date r = x[i];
 				x[i] = x[i + 1];
 				x[i + 1] = r;
@@ -487,7 +499,7 @@ void sortareNumarTelefon(Date x[], int n) {
 	do {
 		flag = true;
 		for (int i = 0; i < n - 1; i++) {
-			if (sortareString(x[i].numartelefon, x[i + 1].numartelefon) == 1) {
+			if (sortareStringToInt(x[i].numartelefon, x[i + 1].numartelefon) == 1) {
 				Date r = x[i];
 				x[i] = x[i + 1];
 				x[i + 1] = r;
