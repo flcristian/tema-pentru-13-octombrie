@@ -11,8 +11,15 @@ public:
 	}
 
 	void addCaracter(Caracter x) {
-		caractere[n] = x;
-		n++;
+		this->caractere[n] = x;
+		this->n++;
+	}
+
+	void deleteCaracter(int i) {
+		for (int j = i; j < n - 1; j++) {
+			this->caractere[j] = this->caractere[j + 1];
+		}
+		this->n--;
 	}
 
 	void citire() {
@@ -38,6 +45,10 @@ public:
 
 	int getDim() {
 		return this->n;
+	}
+
+	void setDim(int n) {
+		this->n = n;
 	}
 
 	void sortareNivel() {
@@ -67,12 +78,27 @@ public:
 		return -1;
 	}
 
-	void sortareAlfabetica() {
+	void sortareAlfabeticaNume() {
 		bool flag = true;
 		do {
 			flag = true;
 			for (int i = 0; i < this->n - 1; i++) {
 				if (sortareString(this->caractere[i].getNume(), this->caractere[i + 1].getNume()) == 1) {
+					Caracter r = this->caractere[i];
+					this->caractere[i] = this->caractere[i + 1];
+					this->caractere[i + 1] = r;
+					flag = false;
+				}
+			}
+		} while (flag == false);
+	}
+
+	void sortareAlfabeticaClasa() {
+		bool flag = true;
+		do {
+			flag = true;
+			for (int i = 0; i < this->n - 1; i++) {
+				if (sortareString(this->caractere[i].getClasa(), this->caractere[i + 1].getClasa()) == 1) {
 					Caracter r = this->caractere[i];
 					this->caractere[i] = this->caractere[i + 1];
 					this->caractere[i + 1] = r;
@@ -96,6 +122,10 @@ public:
 
 	void makeAdmin(int i) {
 		this->caractere[i].setAdministratorStatus(1);
+	}
+
+	void revokeAdmin(int i) {
+		this->caractere[i].setAdministratorStatus(0);
 	}
 
 	Caracter getCaracter(int i) {

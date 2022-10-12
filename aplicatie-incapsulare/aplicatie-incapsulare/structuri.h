@@ -20,6 +20,10 @@ public:
 	}
 
 	Caracter() {
+		this->nume = "Guest";
+		this->clasa = "Unknown";
+		this->nivel = 1;
+		this->administrator = 0;
 	}
 
 	string getNume() {
@@ -55,7 +59,6 @@ public:
 	}
 
 	void descriereCaracter() {
-		cout << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
 		cout << "Nume : " << this->nume << endl;
 		cout << "Clasa : " << this->clasa << endl;
 		cout << "Nivel : " << this->nivel << endl;
